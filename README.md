@@ -8,15 +8,14 @@
   - [Conectando ao MySQL na Azure com Python](#conectando-ao-mysql-na-azure-com-python)
   - [Integração com Power BI](#integração-com-power-bi)
   - [Transformação dos Dados](#transformação-dos-dados)
-  - [8.1. Resultado da mesclagem entre as tabelas depatarmento e local.](#81-resultado-da-mesclagem-entre-as-tabelas-depatarmento-e-local)
   - [Troubleshooting](#troubleshooting)
     - [Erros e Soluções](#erros-e-soluções)
 
 ## Introdução
-Este documento apresenta boas práticas e orientações para a criação e manipulação de uma instância do MySQL na Azure, além de como integrar essa base de dados com Python e Power BI. 
+Este documento apresenta um relatório de criação e manipulação de uma instância do MySQL na Azure, e integração dessa base de dados com Python e Power BI. 
 
 ## Criando uma Instância do MySQL na Azure
-1. **Servidor Flexível**
+1. **Instância na Azure**
    - Nome do Servidor: `desafio-bi-mysql`
    - Versão do MySQL: `8.0`
    - Administrador: `company`
@@ -28,39 +27,37 @@ Este documento apresenta boas práticas e orientações para a criação e manip
 1. **Criação do Banco de Dados**
    - Utilize o script `cria_bd.py` para criar o banco de dados `azure_company`.
 
-![Cria banco de dados pelo python](/figure/figure_2_mens_cria_bd.png)
+    ![Cria banco de dados pelo python](/figure/figure_2_mens_cria_bd.png)
 
-![Consulta ao banco de dados pelo python](/figure/figure_3_consulta_servidor.png)
+    ![Consulta ao banco de dados pelo python](/figure/figure_3_consulta_servidor.png)
 
 
-1. **Criar, alterar, consultar e inserir dados nas Tabelas**
+2. **Criar, alterar, consultar e inserir dados nas Tabelas**
   Utilize o script `exec_comandos_sql.py` para criar, alterar, consultar e inserir Tabelas e dadaos no banco de dados.
-1.1 Tabelas criadas
 
-Tabelas criadas conforme proposto.
+    **Tabelas criadas conforme proposto**
 
-![Consulta ao banco de dados pelo python](/figure/figure_4_cria_tabelas.png)
+    ![Consulta ao banco de dados pelo python](/figure/figure_4_cria_tabelas.png)
 
-1.2 Inserções nas Tabelas
+    **Inserções nas Tabelas**
 
-popular a base de dados nas Tabelas criadas.
-- Inserção dos dados na tabela employee.
-![inserção de dados na tabela employee](/figure/figure_5_insercao_employee.png)
+    - Na tabela employee.
+    ![inserção de dados na tabela employee](/figure/figure_5_insercao_employee.png)
 
-- Inserção dos dados na tabela dependent.
-![inserção de dados na tabela dependent](/figure/figure_6_insercao_dependent.png)
+    - Na tabela dependent.
+    ![inserção de dados na tabela dependent](/figure/figure_6_insercao_dependent.png)
 
-- Inserção dos dados na tabela edepartament.
-![inserção de dados na tabela departament](/figure/figure_7_insercao_departament.png)
+    - Na tabela edepartament.
+    ![inserção de dados na tabela departament](/figure/figure_7_insercao_departament.png)
 
-- Inserção dos dados na tabela dep locations.
-![inserção de dados na tabela deplocations](/figure/figure_8_insercao_deplocations.png)
+    - Na tabela dep locations.
+    ![inserção de dados na tabela deplocations](/figure/figure_8_insercao_deplocations.png)
 
-- Inserção dos dados na tabela project.
-![inserção de dados na tabela project](/figure/figure_9_insercao_project.png)
+    - Na tabela project.
+    ![inserção de dados na tabela project](/figure/figure_9_insercao_project.png)
 
-- Inserção dos dados na tabela work.
-![inserção de dados na tabela work](/figure/figure_9_insercao_work.png)
+    - Na tabela work.
+    ![inserção de dados na tabela work](/figure/figure_9_insercao_work.png)
 
 ## Integração com Power BI
 - A integração com o Power BI foi realizada com sucesso, permitindo a visualização e análise dos dados presentes na base.
@@ -90,20 +87,25 @@ popular a base de dados nas Tabelas criadas.
 -->
 7. **Junção dos colaboradores e respectivos gerentes**
    - Resultado da mesclagem entre as tabelas depatarmento e employee.
-![Junção dos colaboradores e respectivos gerentes](/figure/figure_11_employee_mng.png)
+    ![Junção dos colaboradores e respectivos gerentes](/figure/figure_11_employee_mng.png)
 
 8.  **Mesclar nomes de departamento e localização e porque utilizar mesclar e não atribuir**
-8.1. Resultado da mesclagem entre as tabelas depatarmento e local.
-- 
-![Junção dos colaboradores e respectivos gerentes](/figure/figure_12_dpt_local.png)
-8.2  Porque utilizar mesclar e não atribuir?
-    - União dos dados, a mesclagem permite combinar duas tabelas (departamentos e localizações) em uma nova tabela que contém informações de ambas. Isso é essencial para criar um modelo estrela, onde você precisa de dimensões bem definidas que podem ser relacionadas às suas tabelas de fatos;
-    - Combinações únicas, ao mesclar as tabelas, você pode garantir que cada combinação de departamento e localização seja única. Isso ajuda na normalização dos dados e evita duplicatas. A mesclagem assegura que, para cada registro, você obtenha a combinação exata dos dados de ambas as tabelas;
-    - Facilidade de Análise, com uma tabela que contém departamentos e suas localizações, você facilita a análise dos dados, permitindo que o modelo estrela seja mais eficiente. Isso facilita a criação de visualizações e relatórios no Power BI, já que as relações entre tabelas ficam mais claras;
-    - Evita redundância, Se você apenas atribuísse os dados de uma tabela a outra, poderia acabar criando redundâncias ou complicações nos dados, especialmente se houvesse múltiplas localizações para um único departamento. A mesclagem garante que as relações sejam mantidas de forma mais limpa.
-1.  **Agrupa os dados a fim de saber quantos colaboradores existem por gerente**
+    - Resultado da mesclagem entre as tabelas depatarmento e local.
+
+        ![Junção dos colaboradores e respectivos gerentes](/figure/figure_12_dpt_local.png)
+
+    - Porque utilizar mesclar e não atribuir?
+        - União dos dados, a mesclagem permite combinar duas tabelas (departamentos e localizações) em uma nova tabela que contém informações de ambas. Isso é essencial para criar um modelo estrela, onde você precisa de dimensões bem definidas que podem ser relacionadas às suas tabelas de fatos;
+      
+        - Combinações únicas, ao mesclar as tabelas, você pode garantir que cada combinação de departamento e localização seja única. Isso ajuda na normalização dos dados e evita duplicatas. A mesclagem assegura que, para cada registro, você obtenha a combinação exata dos dados de ambas as tabelas;
+      
+        - Facilidade de Análise, com uma tabela que contém departamentos e suas localizações, você facilita a análise dos dados, permitindo que o modelo estrela seja mais eficiente. Isso facilita a criação de visualizações e relatórios no Power BI, já que as relações entre tabelas ficam mais claras;
+      
+        - Evita redundância, Se você apenas atribuísse os dados de uma tabela a outra, poderia acabar criando redundâncias ou complicações nos dados, especialmente se houvesse múltiplas localizações para um único departamento. A mesclagem garante que as relações sejam mantidas de forma mais limpa.
+
+9.  **Agrupa os dados a fim de saber quantos colaboradores existem por gerente**
     - Resultado da operação utilizando Group By.
-![Agrupa os dados a fim de saber quantos colaboradores existem por gerente](/figure/figure_13_count_employees_mng.png)
+        ![Agrupa os dados a fim de saber quantos colaboradores existem por gerente](/figure/figure_13_count_employees_mng.png)
 
 
 ## Troubleshooting
