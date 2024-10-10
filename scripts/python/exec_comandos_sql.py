@@ -1,3 +1,11 @@
+"""
+Nome do Script: exec_comandos_sql.py
+Descrição: Este script executa comandos para um banco de dados sql remoto ou local .
+Autor: Jacivaldo Carvalho
+Data de Criação: 09 de outubro de 2024
+Licença: MIT License (ou outra licença)
+"""
+
 import configparser
 import mysql.connector
 from mysql.connector import errorcode

@@ -4,63 +4,87 @@
 - [Integração do MySQL na Azure com Python e Power BI](#integração-do-mysql-na-azure-com-python-e-power-bi)
   - [Índice](#índice)
   - [Introdução](#introdução)
-  - [Criando uma Instância do MySQL na Azure](#criando-uma-instância-do-mysql-na-azure)
+  - [Instância do MySQL na Azure](#instância-do-mysql-na-azure)
   - [Conectando ao MySQL na Azure com Python](#conectando-ao-mysql-na-azure-com-python)
   - [Integração com Power BI](#integração-com-power-bi)
   - [Transformação dos Dados](#transformação-dos-dados)
   - [Troubleshooting](#troubleshooting)
     - [Erros e Soluções](#erros-e-soluções)
+  - [Conclusão](#conclusão)
 
 ## Introdução
 Este documento apresenta um relatório de criação e manipulação de uma instância do MySQL na Azure, e integração dessa base de dados com Python e Power BI. 
 
-## Criando uma Instância do MySQL na Azure
-1. **Instância na Azure**
+## Instância do MySQL na Azure
+1. **Instância criada na Azure**
    - Nome do Servidor: `desafio-bi-mysql`
    - Versão do MySQL: `8.0`
    - Administrador: `company`
 
-![Instância mysql criada na Azure](/figure/figure_1_cria_instancia_mysql.png)
+<div align="center">
+  <img src="/figure/figure_1_cria_instancia_mysql.png" alt="Instância mysql criada na Azure" width="1000" height="200"/>
+</div>
 
 
 ## Conectando ao MySQL na Azure com Python
 1. **Criação do Banco de Dados**
-   - Utilize o script `cria_bd.py` para criar o banco de dados `azure_company`.
+   - Utilização do script `cria_bd.py` para criar o banco de dados `azure_company` na instância `desafio-bi-mysql`.
 
-    ![Cria banco de dados pelo python](/figure/figure_2_mens_cria_bd.png)
+   <div align="center">
+   <img src="/figure/figure_2_mens_cria_bd.png" alt="Cria banco de dados pelo python" width="1000" height="100"/>
+   </div>
 
-    ![Consulta ao banco de dados pelo python](/figure/figure_3_consulta_servidor.png)
+   <div align="center">
+   <img src="/figure/figure_3_consulta_servidor.png" alt="Consulta ao banco de dados pelo python" width="1000" height="150"/>
+   </div>
 
 
 2. **Criar, alterar, consultar e inserir dados nas Tabelas**
   Utilize o script `exec_comandos_sql.py` para criar, alterar, consultar e inserir Tabelas e dadaos no banco de dados.
 
-    **Tabelas criadas conforme proposto**
+    2.1 **Tabelas criadas conforme proposto**
 
-    ![Consulta ao banco de dados pelo python](/figure/figure_4_cria_tabelas.png)
+   <div align="center">
+   <img src="/figure/figure_4_cria_tabelas.png" alt="Consulta ao banco de dados pelo python" width="1000" height="200"/>
+   </div>
 
-    **Inserções nas Tabelas**
+    2.2 **Populando as Tabelas**
 
-    - Na tabela employee.
-    ![inserção de dados na tabela employee](/figure/figure_5_insercao_employee.png)
+    - **Na tabela employee.**
+   <div align="center">
+   <img src="/figure/figure_5_insercao_employee.png" alt="inserção de dados na tabela employee" width="1000" height="200"/>
+   </div>
 
-    - Na tabela dependent.
-    ![inserção de dados na tabela dependent](/figure/figure_6_insercao_dependent.png)
+    - **Na tabela dependent.**
+   <div align="center">
+   <img src="/figure/figure_6_insercao_dependent.png" alt="inserção de dados na tabela dependent" width="1000" height="200"/>
+   </div>
 
-    - Na tabela edepartament.
-    ![inserção de dados na tabela departament](/figure/figure_7_insercao_departament.png)
+    - **Na tabela edepartament.**
+   <div align="center">
+   <img src="/figure/figure_7_insercao_departament.png" alt="inserção de dados na tabela departament" width="1000" height="200"/>
+   </div>
 
-    - Na tabela dep locations.
-    ![inserção de dados na tabela deplocations](/figure/figure_8_insercao_deplocations.png)
+    - **Na tabela dep locations.**
+   <div align="center">
+   <img src="/figure/figure_8_insercao_deplocations.png" alt="inserção de dados na tabela deplocations" width="1000" height="200"/>
+   </div>
 
-    - Na tabela project.
-    ![inserção de dados na tabela project](/figure/figure_9_insercao_project.png)
+    - **Na tabela project.**
+   <div align="center">
+   <img src="/figure/figure_9_insercao_project.png" alt="inserção de dados na tabela project" width="1000" height="200"/>
+   </div>
 
-    - Na tabela work.
-    ![inserção de dados na tabela work](/figure/figure_9_insercao_work.png)
+    - **Na tabela work.**
+   <div align="center">
+   <img src="/figure/figure_9_insercao_work.png" alt="inserção de dados na tabela work" width="1000" height="250"/>
+   </div>
 
 ## Integração com Power BI
-- A integração com o Power BI foi realizada com sucesso, permitindo a visualização e análise dos dados presentes na base.
+A integração com o Power BI foi realizada com sucesso, permitindo a visualização e análise dos dados presentes na base.
+   <div align="center">
+   <img src="/figure/figure_15_int_dados.png" alt="inserção de dados na tabela work" width="400" height="300"/>
+   </div>
 
 ## Transformação dos Dados
 1. **Verificação de Cabeçalhos e Tipos de Dados**
@@ -87,12 +111,16 @@ Este documento apresenta um relatório de criação e manipulação de uma inst�
 -->
 7. **Junção dos colaboradores e respectivos gerentes**
    - Resultado da mesclagem entre as tabelas depatarmento e employee.
-    ![Junção dos colaboradores e respectivos gerentes](/figure/figure_11_employee_mng.png)
+
+   <div align="center">
+   <img src="//figure/figure_11_employee_mng.png" alt="inserção de dados na tabela work" width="400" height="300"/>
+   </div>
 
 8.  **Mesclar nomes de departamento e localização e porque utilizar mesclar e não atribuir**
     - Resultado da mesclagem entre as tabelas depatarmento e local.
-
-        ![Junção dos colaboradores e respectivos gerentes](/figure/figure_12_dpt_local.png)
+   <div align="center">
+   <img src="/figure/figure_12_dpt_local.png" alt="Mesclar nomes de departamento e localização e porque utilizar mesclar e não atribuir" width="400" height="300"/>
+   </div>
 
     - Porque utilizar mesclar e não atribuir?
         - União dos dados, a mesclagem permite combinar duas tabelas (departamentos e localizações) em uma nova tabela que contém informações de ambas. Isso é essencial para criar um modelo estrela, onde você precisa de dimensões bem definidas que podem ser relacionadas às suas tabelas de fatos;
@@ -105,7 +133,9 @@ Este documento apresenta um relatório de criação e manipulação de uma inst�
 
 9.  **Agrupa os dados a fim de saber quantos colaboradores existem por gerente**
     - Resultado da operação utilizando Group By.
-        ![Agrupa os dados a fim de saber quantos colaboradores existem por gerente](/figure/figure_13_count_employees_mng.png)
+   <div align="center">
+   <img src="/figure/figure_13_count_employees_mng.png" alt="Agrupa os dados a fim de saber quantos colaboradores existem por gerente" width="400" height="300"/>
+   </div>
 
 
 ## Troubleshooting
@@ -134,6 +164,7 @@ Este documento apresenta um relatório de criação e manipulação de uma inst�
      SHOW CREATE TABLE dept_locations;
      ```
 
-5. **1452 (23000): Cannot add or update a child row**
-   - O erro foi causado por uma violação de chave estrangeira. A coluna `Super_ssn` na tabela `employee` deve referenciar corretamente a coluna `Ssn`. Realize a correção nos dados e tente novamente.
+
+## Conclusão
+Esse projeto teve como objetivo o tratamento de dados em uma instância `MySQL` na `Azure`, manipulação do banco de dados criado com `Python` e `DBeaver`, e integração com `Power BI` para a transformação dos dados necessários. Ao final, conseguimos não apenas otimizar a gestão das informações. A abordagem adotada permitiu uma maior eficiência nos processos de extração, transformação e carregamento (ETL), garantindo que os dados estejam sempre atualizados e acessíveis para tomadas de decisão mais ágeis e informadas. Assim, o projeto contribui significativamente para a melhoria dos processos de análise de dados na organização, permitindo um suporte mais robusto às estratégias de negócios.
 
