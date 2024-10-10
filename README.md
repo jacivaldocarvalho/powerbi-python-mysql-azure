@@ -113,7 +113,7 @@ A integração com o Power BI foi realizada com sucesso, permitindo a visualiza�
    - Resultado da mesclagem entre as tabelas depatarmento e employee.
 
    <div align="center">
-   <img src="//figure/figure_11_employee_mng.png" alt="inserção de dados na tabela work" width="400" height="300"/>
+   <img src="/figure/figure_11_employee_mng.png" alt="inserção de dados na tabela work" width="400" height="300"/>
    </div>
 
 8.  **Mesclar nomes de departamento e localização e porque utilizar mesclar e não atribuir**
