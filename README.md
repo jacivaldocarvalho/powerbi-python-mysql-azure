@@ -22,6 +22,8 @@ Este repositório demonstra a integração entre o MySQL na Azure, Python e Powe
 2. **Executando os Scripts Python**: Use os scripts para automatizar a criação e manipulação dos dados.
 3. **Conectando ao Power BI**: Visualize e analise os dados a partir do Power BI.
 
+Mais detalhes com prints da execução, você pode procurar em [relatório](./report.md).
+
 ## Benefícios
 
 - **Escalabilidade**: Com a Azure, o projeto pode ser facilmente escalado para grandes volumes de dados.
@@ -31,3 +33,22 @@ Este repositório demonstra a integração entre o MySQL na Azure, Python e Powe
 ## Conclusão
 
 Esse projeto é um exemplo prático de como integrar tecnologias populares para criar uma solução de análise de dados robusta e escalável. Ideal para quem busca aprender sobre cloud computing, automação de dados e visualização.
+
+## Contribuições
+
+Se você tiver sugestões de melhorias ou encontrar problemas com o script, sinta-se à vontade para abrir um **issue** ou submeter um **pull request**.
+
+## Contatos e Network
+
+Gostaria de trocar ideias, colaborar ou aprender mais sobre DevOps, Infraestrutura como Código e desenvolvimento de software? Fique à vontade para me contactar nas plataformas abaixo:
+
+- **LinkedIn**: [LinkedIn](https://www.linkedin.com/in/jacivaldocarvalho/) 👔
+- **E-mail**: [E-mail](mailto:jacivaldocarvalho@gmail.com) 📧
+- **GitHub**: [GitHub](https://github.com/jacivaldocarvalho) 🐙
+- **Medium**: [Medium](https://medium.com/@jacivaldocarvalho) ✍️
+
+Sempre aberto a novas conexões e oportunidades de aprendizado!
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
