@@ -40,8 +40,6 @@ Se você tiver sugestões de melhorias ou encontrar problemas com o script, sint
 
 ## Contatos e Network
 
-Gostaria de trocar ideias, colaborar ou aprender mais sobre DevOps, Infraestrutura como Código e desenvolvimento de software? Fique à vontade para me contactar nas plataformas abaixo:
-
 - **LinkedIn**: [LinkedIn](https://www.linkedin.com/in/jacivaldocarvalho/) 👔
 - **E-mail**: [E-mail](mailto:jacivaldocarvalho@gmail.com) 📧
 - **GitHub**: [GitHub](https://github.com/jacivaldocarvalho) 🐙
